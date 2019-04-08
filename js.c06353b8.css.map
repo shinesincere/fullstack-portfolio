@@ -1,1 +1,0 @@
-{"version":3,"sources":["../css/index.scss"],"names":[],"mappings":"AAEA,KACE,cAHM","file":"js.c06353b8.css","sourceRoot":"../src/client/text","sourcesContent":["$bg: red;\n\nbody {\n  background: $bg;\n}"]}
