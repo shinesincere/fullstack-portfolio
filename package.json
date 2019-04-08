@@ -1,0 +1,65 @@
+{
+  "herokupage": "https://fullstack-portfolio.herokuapp.com/",
+  "homepage": "https://shinesincere.github.io/",
+  "name": "fullstack-portfolio",
+  "version": "1.0.0",
+  "description": "sass, react, express, webpack",
+  "author": "shine sincere",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "parcel": "rm -rf build && rm -rf .cache && parcel build ./src/client/text/index.html -d build --public-url ./",
+    "build": "rm -rf build && webpack --mode production --public-url ./",
+    "client": "webpack-dev-server ./src/client/js/index.js --mode development --open --hot",
+    "server": "nodemon ./src/server/index.js",
+    "concur": "concurrently \"npm run build\" \"npm run client\" \"npm run server\"",
+    "gh1": "google-chrome https://github.com/shinesincere/fullstack-portfolio/settings",
+    "gh2": "google-chrome https://github.com/new",
+    "gh3": "rm -rf .git && git init && git status && git add . && git commit -m 'Github'",
+    "gh4": "git remote add origin https://github.com/shinesincere/fullstack-portfolio.git",
+    "gh5": "git push -u origin master && gh-pages -d build",
+    "ghp": "npm run parcel && npm run gh3 && npm run gh4 && npm run gh5",
+    "ghb": "npm run build && npm run gh3 && npm run gh4 && npm run gh5"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "css-loader": "^2.1.1",
+    "dotenv": "^7.0.0",
+    "experss": "^1000.0.0",
+    "file-loader": "^3.0.1",
+    "gh-pages": "^2.0.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.7.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
